@@ -1,0 +1,374 @@
+<script>
+
+var opciones = prompt("Que desea realizar \n (1)Informacion de los equipos? \n (2)Prestamo \n (3)Historial de prestamos \n (4)Almacen \n (5)Usuario en especifico");
+switch (opciones) {
+        case "1":
+            alert("Informacion de los equipos");
+            console.log("Informacion de los equipos");
+            elemnetos ();
+            break;
+        case "2":
+            alert("Prestamo");
+            console.log("Prestamo");
+            datos();
+            break;
+        case "3":
+            alert("Historial de prestamos");
+            console.log("Historial de prestamos ");
+            presta ();
+            break;
+        case "4":
+            alert("Almacen");
+            console.log("Almacen ");
+            alma ();
+            break;
+        case "5":
+            alert("Usuario en especifico");
+            console.log("Usuario en especifico ");
+            buscar ();
+            break;
+        default:
+            alert("Opcion no valida");
+            break;
+    }
+
+    function elemnetos (){
+var elemtentos1 = {
+        "equipo1": {
+            "nombre": {
+               "nombre": ['laptop hp'],
+               "codigo": "0001",
+                "cantidad": 1,
+                
+                },
+            },
+        
+        "equipo2": {
+            "nombre": {
+               "nombre": ['laptop dell'],
+               "codigo": "0002",
+                "cantidad": 1,
+                
+                },
+            },
+
+        
+        "equipo3": {
+            "nombre": {
+               "nombre": ['laptop Samsung'],
+               "codigo": "0003",
+                "cantidad": 1,
+                
+                },
+            },
+            
+
+        "equipo4": {
+            "nombre": {
+               "nombre": ['laptop Huawei'],
+               "codigo": "0004",
+                "cantidad": 1,
+                
+                },
+            },
+
+            
+        "equipo5": {
+            "nombre": {
+               "nombre": ['laptop Hisense'],
+               "codigo": "0005",
+                "cantidad": 1,
+                
+                },
+            },
+
+        }
+        for (var i in elemtentos1) {
+            var nombre = elemtentos1[i].nombre.nombre;
+            var codigo = elemtentos1[i].nombre.codigo;
+            var cantidad = elemtentos1[i].nombre.cantidad;
+            console.log("Nombre: " + nombre);
+            console.log("Codigo: " + codigo);
+            console.log("Cantidad: " + cantidad);
+            console.log("");
+            }
+            return elemtentos1;
+        }
+
+    function alma (){
+        var almacen = [
+            {
+                "nombre": "Equipo 1",
+                "equipo": "laptop hp"
+            },
+            {
+                "nombre": "Equipo 2",
+                "equipo": "laptop dell"
+            },
+            {
+                "nombre": "Equipo 3",
+                "equipo": "laptop Samsung"
+            },
+            {
+                "nombre": "Equipo 4",
+                "equipo": "laptop Huawei"
+            },
+            {
+                "nombre": "Equipo 5",
+                "equipo": "laptop Hisense"
+            }
+        ]
+        for (var i = 0; i < almacen.length; i++) {
+            var nombre = almacen[i].nombre;
+            var equipo = almacen[i].equipo;
+            console.log("Nombre: " + nombre);
+            console.log("Equipo: " + equipo);
+            console.log(" ");
+    }
+}
+
+
+ function datos() {
+     var Ingrese = prompt("Ingrese su nombre");
+        var Ingrese2 = prompt("¿Que equipo desea?");
+        var laps = [
+            {
+                "nombre": "Equipo 1",
+                "equipo": "laptop hp",
+                "estado": "Disponible"
+            },
+            {
+                "nombre": "Equipo 2",
+                "equipo": "laptop dell",
+                "estado": "Disponible"
+            },
+            {
+                "nombre": "Equipo 3",
+                "equipo": "laptop Samsung",
+                "estado": "En uso"
+            },
+            {
+                "nombre": "Equipo 4",
+                "equipo": "laptop Huawei",
+                "estado": "En uso"
+            },
+            {
+                "nombre": "Equipo 5",
+                "equipo": "laptop Hisense",
+                "estado": "Disponible"
+            }
+        ]
+        switch (Ingrese2) {
+            case "Equipo 1":
+                if (laps[0].estado == "Disponible") {
+                    console.log("El equipo " + Ingrese2 + " esta disponible");
+                    console.log(" ");
+                    console.log("Nombre: " + Ingrese);
+                    console.log("Equipo: " + Ingrese2);
+                    console.log(" ");
+                }
+                break;
+            case "Equipo 2":
+                if (laps[1].estado == "Disponible") {
+                    console.log("El equipo " + Ingrese2 + " esta disponible");
+                    console.log(" ");
+                    console.log("Nombre: " + Ingrese);
+                    console.log("Equipo: " + Ingrese2);
+                    console.log(" ");
+                }
+                break;
+            case "Equipo 3":
+                if (laps[2].estado == "En uso") {
+                    console.log("El equipo " + Ingrese2 + " esta en uso");
+                    console.log(" ");
+                    console.log("Nombre: " + Ingrese);
+                    console.log("Equipo: " + Ingrese2);
+                    console.log(" ");
+                }
+                break;
+            case "Equipo 4":
+                if (laps[3].estado == "En uso") {
+                    console.log("El equipo " + Ingrese2 + " esta en uso");
+                    console.log(" ");
+                    console.log("Nombre: " + Ingrese);
+                    console.log("Equipo: " + Ingrese2);
+                    console.log(" ");
+                }
+                break;
+            case "Equipo 5":
+                if (laps[4].estado == "Disponible") {
+                    console.log("El equipo " + Ingrese2 + " esta disponible");
+                    console.log(" ");
+                    console.log("Nombre: " + Ingrese);
+                    console.log("Equipo: " + Ingrese2);
+                    console.log(" ");
+                }
+                break;
+            default:
+                console.log("El equipo " + Ingrese2 + " no existe");
+                console.log(" ");
+                console.log("Nombre: " + Ingrese);
+                console.log("Equipo: " + Ingrese2);
+                console.log(" ");
+            }
+
+ }
+
+
+function presta (){
+    var usuario = [
+           {
+            "id": "1",
+             "nombre": "Juan",
+             "apellido": "Perez",
+             "nombree": "Equipo 1",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+           },
+             {
+            "id": "2",
+            "nombre": "Pedro",
+            "apellido": "Perez",
+            "nombree": "Equipo 2",
+            "fecha": "01/01/2020",
+            "estado": "Prestado"
+             },
+             {
+            "id": "3",
+            "nombre": "Aaron",
+            "apellido": "Suiza",
+            "nombree": "Equipo 3",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+             },
+             {
+                 "id": "4",
+                "nombre": "Pepe",
+                 "apellido": "Suarez",
+             "nombree": "Equipo 4",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+           },
+             {
+                 "id": "5",
+                 "nombre": "Angel",
+                 "apellido": "Peña",
+                 "nombree": "Equipo 5",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+             }
+    ];
+    for (var i = 0; i < usuario.length; i++) {
+        var id = usuario[i].id;
+        var nombre = usuario[i].nombre;
+        var apellido = usuario[i].apellido;
+        var nombree = usuario[i].nombree;
+        var fecha = usuario[i].fecha;
+        var estado = usuario[i].estado;
+        console.log("Id: " + id);
+        console.log("Nombre: " + nombre);
+        console.log("Apellido: " + apellido);
+        console.log("Nombre del equipo: " + nombree);
+        console.log("Fecha: " + fecha);
+        console.log("Estado: " + estado);
+        console.log(" ");
+    } 
+}
+function buscar() {   
+    var buscar = prompt("Ingrese el nombre del usuario");
+    var usu = [
+           {
+            "id": "1",
+             "nombre": "Juan",
+             "apellido": "Perez",
+             "nombree": "Equipo 1",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+           },
+             {
+            "id": "2",
+            "nombre": "Pedro",
+            "apellido": "Perez",
+            "nombree": "Equipo 2",
+            "fecha": "01/01/2020",
+            "estado": "Prestado"
+             },
+             {
+            "id": "3",
+            "nombre": "Aaron",
+            "apellido": "Suiza",
+            "nombree": "Equipo 3",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+             },
+             {
+                 "id": "4",
+                "nombre": "Pepe",
+                 "apellido": "Suarez",
+             "nombree": "Equipo 4",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+           },
+             {
+                 "id": "5",
+                 "nombre": "Angel",
+                 "apellido": "Peña",
+                 "nombree": "Equipo 5",
+             "fecha": "01/01/2020",
+             "estado": "Prestado"
+             }
+    ];
+    switch (buscar) {
+        case "Juan":
+            console.log("ID: " + usu[0].id);
+            console.log("Nombre: " + usu[0].nombre);
+            console.log("Apellido: " + usu[0].apellido);
+            console.log("Nombre del equipo: " + usu[0].nombree);
+            console.log("Fecha: " + usu[0].fecha);
+            console.log("Estado: " + usu[0].estado);
+            break;
+        case "Pedro":
+            console.log("ID: " + usu[1].id);
+            console.log("Nombre: " + usu[1].nombre);
+            console.log("Apellido: " + usu[1].apellido);
+            console.log("Nombre del equipo: " + usu[1].nombree);
+            console.log("Fecha: " + usu[1].fecha);
+            console.log("Estado: " + usu[1].estado);
+            break;
+        case "Aaron":
+            console.log("ID: " + usu[2].id);
+            console.log("Nombre: " + usu[2].nombre);
+            console.log("Apellido: " + usu[2].apellido);
+            console.log("Nombre del equipo: " + usu[2].nombree);
+            console.log("Fecha: " + usu[2].fecha);
+            console.log("Estado: " + usu[2].estado);
+            break;
+        case "Pepe":
+            console.log("ID: " + usu[3].id);
+            console.log("Nombre: " + usu[3].nombre);
+            console.log("Apellido: " + usu[3].apellido);
+            console.log("Nombre del equipo: " + usu[3].nombree);
+            console.log("Fecha: " + usu[3].fecha);
+            console.log("Estado: " + usu[3].estado);
+            break;
+        case "Angel":
+            console.log("ID: " + usu[4].id);
+            console.log("Nombre: " + usu[4].nombre);
+            console.log("Apellido: " + usu[4].apellido);
+            console.log("Nombre del equipo: " + usu[4].nombree);
+            console.log("Fecha: " + usu[4].fecha);
+            console.log("Estado: " + usu[4].estado);
+            break;
+        default:
+            console.log("No se encontro el usuario");
+            break;
+    }
+            
+        }
+
+            
+
+
+
+
+</script>
